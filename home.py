@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request,redirect
-from avatars import avatar
+from avatars import avatar,context
 import os
 from PIL import Image
 from io import BytesIO
 import json
+import wikipedia
 
 app = Flask(__name__,template_folder='template')
 
@@ -48,9 +49,13 @@ def submit():
     if mood is not None:
         prompts = prompts+", "+mood+" mood"
     print(prompts)
+    text = f"number of endangered, exitnct and total number of {ann} species in world?"
     img_data = avatar(prompts)
+    text_data = context(text)
+    original_image = wikipedia.page(f"endangered {ann}").images[0]
+    title = wikipedia.page(f"endangered {ann}").title
     # img_data = img_data.choices[0].text
-    return json.dumps({'status':'OK','image_url' : img_data['data'][0]['url']})
+    return json.dumps({'status':'OK','image_url' : img_data['data'][0]['url'],'data':text_data,'original':original_image,'title':title})
 
     # Display or save the image
     # img.show()

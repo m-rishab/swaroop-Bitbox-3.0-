@@ -35,6 +35,8 @@ form {
   display: hidden;
   padding: 40px;
   border-radius: 10px;
+  width: 250px;
+  height: 500px;
 }
 
 h2 {
@@ -43,6 +45,15 @@ h2 {
   text-align: center;
 }
 
+input[type="text"] {
+  display: none;
+  width: 120px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+  float: left;
+}
 .button-container1 {
   color: black;
   background-color: #d0ceb1;
@@ -56,18 +67,18 @@ h2 {
   align-items: center;
 }
 
-.button-container1 {
-  
+.btn {
   padding: 10px 20px;
   margin: 20px;
   border: none;
   border-radius: 5px;
+  background-color: #4caf50;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
-.button-container1:hover {
+.btn:hover {
   background-color: #fab65c;
 }
 
@@ -75,31 +86,6 @@ h2 {
   position: absolute;
   display: none;
   color: #fff;
-}
-.button-container1 label input + span {
-  color: #000000;
-}
-
-/* This will declare how a selected input will look giving generic properties */
-.button-container1 input:checked + span {
-  color: #080808;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-}
-
-.panda input:checked + span {
-  background-color: #fab65c;
-}
-.elephant input:checked + span {
-  background-color: #fab65c;
-}
-.monkey input:checked + span {
-  background-color: #fab65c;
-}
-.rabbit input:checked + span {
-  background-color: #fab65c;
-}
-.gorilla input:checked + span {
-  background-color: #fab65c;
 }
 .form-container {
   display: inline-block;
@@ -157,10 +143,6 @@ h2 {
 .hair input:checked + span {
   background-color: #fab65c;
 }
-
-.hairs input:checked + span {
-  background-color: #fab65c;
-}
 .jewellery input:checked + span {
   background-color: #fab65c;
 }
@@ -170,38 +152,6 @@ h2 {
 .dress input:checked + span {
   background-color: #fab65c;
 }
-.Goggles input:checked + span {
+.specs input:checked + span {
   background-color: #fab65c;
-}
-
-.mouth input:checked + span {
-  background-color: #fab65c;
-}
-.output{
-  display: grid;
- align-items: center; 
- grid-template-columns: 1fr 1fr 1fr;
- column-gap: 5px;
-}
-.result{
-  position: right;
-}
-.datas{
-  color: #000;
-}
-
-.original img{
-  position: left;
-  width: 250px;
-  height: 250px;
-}
-.original p{
-  position: top;
-  color: #000;
-}
-.mint {
-  margin-left: 80%;
-  font-size: medium;
-  background-color: aqua;
-  color: #000000;
 }

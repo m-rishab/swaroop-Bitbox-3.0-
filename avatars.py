@@ -4,14 +4,7 @@ from io import BytesIO
 from PIL import Image
 
 
-openai.api_key = "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"
-
-# response = openai.Image.create(
-#   prompt="a white siamese cat",
-#   n=1,
-#   size="1024x1024"
-# )
-# image_url = response['data'][0]['url'] # type: ignore
+openai.api_key = "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"
 
 
 def avatar(prompt):
@@ -20,10 +13,23 @@ def avatar(prompt):
     n=1,
     size='256x256'
     )
-
-    # Convert the image data to a Pillow image object
-
     img_data = requests.get(response['data'][0]['url']).content
     return response
     
-# avatar("2D monkey avatar with goggles,jewellery, cap and hoodie")
+
+def context(qstn):
+    model_engine = "text-davinci-003"
+    prompt = qstn
+
+    # Generate a response
+    completion = openai.Completion.create(
+        engine=model_engine,
+        prompt=prompt,
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+
+    response = completion.choices[0].text
+    return response
