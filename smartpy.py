@@ -5,7 +5,7 @@ import smartpy as sp
 class AvatarNFT(sp.Contract):
     def __init__(self):
         self.init(
-            owner = sp.address('tz1...'),  # replace with your Tezos address
+            owner = sp.address('tz2FeTmaEvEUGjTNM5UjZ61Tf4gTC7ZbCQ7H'),  # replace with your Tezos address
             nft_count = 0,
             nft_metadata = {}
         )
