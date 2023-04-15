@@ -1,4 +1,4 @@
-# Import required libraries
+// Import required libraries
 import smartpy as sp
 
 # Define the Avatar NFT smart contract
