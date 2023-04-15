@@ -45,15 +45,6 @@ h2 {
   text-align: center;
 }
 
-input[type="text"] {
-  display: none;
-  width: 120px;
-  height: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-left: 10px;
-  float: left;
-}
 .button-container1 {
   color: black;
   background-color: #d0ceb1;
@@ -89,7 +80,7 @@ input[type="text"] {
 }
 .form-container {
   display: inline-block;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 .features {
@@ -152,6 +143,17 @@ input[type="text"] {
 .dress input:checked + span {
   background-color: #fab65c;
 }
-.specs input:checked + span {
+.Goggles input:checked + span {
   background-color: #fab65c;
+}
+.result{
+  position: relative;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.mint {
+  margin-left: 80%;
+  font-size: medium;
+  background-color: aqua;
+  color: #000000;
 }
