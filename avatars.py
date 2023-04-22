@@ -4,7 +4,7 @@ from io import BytesIO
 from PIL import Image
 
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def avatar(prompt):

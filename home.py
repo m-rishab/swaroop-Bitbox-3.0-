@@ -55,27 +55,7 @@ def submit():
     original_image = wikipedia.page(f"endangered {ann}").images[0]
     title = wikipedia.page(f"endangered {ann}").title
     # img_data = img_data.choices[0].text
-    return json.dumps({'status':'OK','image_url' : img_data['data'][0]['url'],'data':text_data,'original':original_image,'title':title})
-
-    # Display or save the image
-    # img.show()
-
-
-@app.route('/mint',methods=['POST'])
-def mint_now():
-    img_url = request.form['img']
-    # function to do further process of minting
-    return img_url
-
-
-@app.route("/payment", methods=['GET', 'POST'])
-def index():
-      data = pay
-      return redirect(f"/{data}")
-
-@app.route("/<upi>")
-def next(upi):
-  return render_template("index.html", upi=upi)
+    return json.dumps({'status':'OK','image_url' : img_data['data'][0]['url'],'data':text_data,'original':original_image,'title':title,"pay":pay})
 
 
 if __name__ == "__main__":
