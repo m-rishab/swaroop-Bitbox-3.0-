@@ -9,7 +9,7 @@ Swaroop is a groundbreaking web application that combines blockchain technology,
 
 ### Generative AI Avatars
 
-Harness the power of the Stable Diffusion API to generate visually captivating avatars. Each avatar is a creative representation of an endangered species, highlighting the unique features of these animals.
+Harness the power of the *Stable Diffusion API* to generate visually captivating avatars. Each avatar is a creative representation of an endangered species, highlighting the unique features of these animals.
 
 ### Blockchain Integration
 
